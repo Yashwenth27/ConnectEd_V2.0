@@ -15,7 +15,7 @@ from firebase_admin import credentials
 
 # Initialize Firebase Admin SDK with service account credentials
 try:
-    cred = credentials.Certificate("path/to/serviceAccountKey.json")
+    cred = credentials.Certificate("connected-3948a-firebase-adminsdk-zthtg-53ccdd7723.json")
     firebase_admin.initialize_app(cred)
 except:
     st.warning("Not initialising")
