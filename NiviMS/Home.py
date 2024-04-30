@@ -14,11 +14,9 @@ import firebase_admin
 from firebase_admin import credentials
 
 # Initialize Firebase Admin SDK with service account credentials
-try:
-    cred = credentials.Certificate("NiviMS/connected-3948a-firebase-adminsdk-zthtg-53ccdd7723.json")
-    firebase_admin.initialize_app(cred)
-except:
-    st.warning("Not initialising")
+
+cred = credentials.Certificate("NiviMS/connected-3948a-firebase-adminsdk-zthtg-53ccdd7723.json")
+firebase_admin.initialize_app(cred)
 
 # Add elements to the first column
 with col1:
