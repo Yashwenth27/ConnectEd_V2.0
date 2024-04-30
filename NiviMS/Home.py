@@ -10,6 +10,15 @@ image_urls = [
     "https://images.pexels.com/photos/159775/library-la-trobe-study-students-159775.jpeg?auto=compress&cs=tinysrgb&w=600"
 ]
 col1, col2 = st.columns(2)
+import firebase_admin
+from firebase_admin import credentials
+
+# Initialize Firebase Admin SDK with service account credentials
+try:
+    cred = credentials.Certificate("path/to/serviceAccountKey.json")
+    firebase_admin.initialize_app(cred)
+except:
+    st.warning("Not initialising")
 
 # Add elements to the first column
 with col1:
